@@ -1,0 +1,62 @@
+[gd_scene load_steps=4 format=3 uid="uid://cy8gq5q600bdh"]
+
+[ext_resource type="Script" path="res://menulevel_6.gd" id="1_dmmve"]
+
+[sub_resource type="Gradient" id="Gradient_mj7od"]
+colors = PackedColorArray(0.701902, 0.700395, 0, 1, 0.725084, 0.482501, 0.164116, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_8uqw5"]
+gradient = SubResource("Gradient_mj7od")
+
+[node name="menu1" type="Node2D"]
+script = ExtResource("1_dmmve")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(959.75, 541.5)
+scale = Vector2(29.8828, 16.7969)
+texture = SubResource("GradientTexture2D_8uqw5")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 583.0
+offset_top = 24.0
+offset_right = 1331.24
+offset_bottom = 178.0
+theme_override_font_sizes/font_size = 100
+text = "Last 3 Episodes"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button4" type="Button" parent="."]
+offset_left = 66.0
+offset_top = 929.0
+offset_right = 142.0
+offset_bottom = 979.0
+theme_override_font_sizes/font_size = 30
+text = "Previous Episodes
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="."]
+offset_left = 67.0
+offset_top = 200.0
+offset_right = 1860.0
+offset_bottom = 388.0
+theme_override_font_sizes/font_size = 100
+text = "Ozymandias"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 67.0
+offset_top = 450.0
+offset_right = 1860.0
+offset_bottom = 638.0
+theme_override_font_sizes/font_size = 100
+text = "Granits State"
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 67.0
+offset_top = 700.0
+offset_right = 1860.0
+offset_bottom = 888.0
+theme_override_font_sizes/font_size = 100
+text = "Felina"
+
+[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]

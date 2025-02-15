@@ -1,0 +1,153 @@
+[gd_scene load_steps=9 format=3 uid="uid://gxdhtxpjmm6q"]
+
+[ext_resource type="Texture2D" uid="uid://dyys3c2k1fok" path="res://Bildschirmfoto_11-2-2025_20134_sketchfab.com.jpeg" id="1_olg4f"]
+[ext_resource type="Texture2D" uid="uid://c7087upw72yax" path="res://inverted_bold_minimal_outline_sketch.png" id="2_x1g0x"]
+[ext_resource type="Script" path="res://animation_player1.1.2.gd" id="3_n8eut"]
+
+[sub_resource type="Animation" id="Animation_2giu2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D2:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.424099, 0.386246)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(821, 534)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D2:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0539293]
+}
+
+[sub_resource type="Animation" id="Animation_bcvgd"]
+resource_name = "crash"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D2:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.16667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.323226, 0.308906), Vector2(0.488492, 0.495931)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.16667, 1.46667, 2.13333, 2.36667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(612, 513), Vector2(1314, 661), Vector2(1278, 666), Vector2(1283, 700), Vector2(1301, 677)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D2:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.16667, 1.7, 1.86667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0539293, 0.380482, 0.569835, 0.432741]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q7gui"]
+_data = {
+"RESET": SubResource("Animation_2giu2"),
+"crash": SubResource("Animation_bcvgd")
+}
+
+[sub_resource type="Gradient" id="Gradient_egnn5"]
+offsets = PackedFloat32Array(0.0240964)
+colors = PackedColorArray(0.415686, 0.141176, 0.101961, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_vmnuh"]
+gradient = SubResource("Gradient_egnn5")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(940, 467)
+rotation = -0.0010795
+scale = Vector2(1.42462, 1.27524)
+texture = ExtResource("1_olg4f")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(821, 534)
+rotation = 0.0539293
+scale = Vector2(0.424099, 0.386246)
+texture = ExtResource("2_x1g0x")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_q7gui")
+}
+script = ExtResource("3_n8eut")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(1657.3, 743.332)
+rotation = 0.179865
+scale = Vector2(1.42571, 71.9846)
+texture = SubResource("GradientTexture1D_vmnuh")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(1514.07, 697.602)
+rotation = 0.380046
+scale = Vector2(1.42571, 35.6914)
+texture = SubResource("GradientTexture1D_vmnuh")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(1493, 740)
+rotation = -0.00718892
+scale = Vector2(1.42571, 35.6914)
+texture = SubResource("GradientTexture1D_vmnuh")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(1712, 865)
+rotation = -0.00718892
+scale = Vector2(1.42571, 35.6914)
+texture = SubResource("GradientTexture1D_vmnuh")
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+position = Vector2(1575, 822)
+rotation = 0.207343
+scale = Vector2(1.42571, 35.6914)
+texture = SubResource("GradientTexture1D_vmnuh")
+
+[node name="Sprite2D8" type="Sprite2D" parent="."]
+position = Vector2(1649, 654)
+rotation = 0.207343
+scale = Vector2(1.42571, 35.6914)
+texture = SubResource("GradientTexture1D_vmnuh")

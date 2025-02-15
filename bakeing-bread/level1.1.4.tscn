@@ -1,0 +1,119 @@
+[gd_scene load_steps=9 format=3 uid="uid://dekh6r1kp6iyf"]
+
+[ext_resource type="Texture2D" uid="uid://cdy2ys8vtkp46" path="res://RV 1.1.4.png" id="1_kevdv"]
+[ext_resource type="Texture2D" uid="uid://cu1cggaiyi4fi" path="res://Leg.png" id="2_wnqbd"]
+[ext_resource type="Script" path="res://animation_player1.1.4.gd" id="3_her47"]
+
+[sub_resource type="Gradient" id="Gradient_jctbd"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0.937255, 0.894118, 0.690196, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ot23l"]
+gradient = SubResource("Gradient_jctbd")
+
+[sub_resource type="Animation" id="Animation_e3dn2"]
+resource_name = "Leg"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D2:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.03333, 2),
+"transitions": PackedFloat32Array(0.554785, 0.0669858),
+"update": 0,
+"values": [-1.20428, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.03333, 2),
+"transitions": PackedFloat32Array(0.870551, 1),
+"update": 0,
+"values": [Vector2(-5.00002, 269), Vector2(1213, 631)]
+}
+
+[sub_resource type="Animation" id="Animation_lpdud"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D2:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-5.00002, 269)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1gyf7"]
+_data = {
+"Leg": SubResource("Animation_e3dn2"),
+"RESET": SubResource("Animation_lpdud")
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(964, 535)
+scale = Vector2(1.5275, 1.37058)
+texture = ExtResource("1_kevdv")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(-5.00002, 269)
+texture = ExtResource("2_wnqbd")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(141.25, 372.5)
+scale = Vector2(11.5234, 14.2031)
+texture = SubResource("GradientTexture2D_ot23l")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_1gyf7")
+}
+script = ExtResource("3_her47")

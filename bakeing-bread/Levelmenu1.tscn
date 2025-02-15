@@ -1,0 +1,118 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxo8vx6v18nls"]
+
+[ext_resource type="Script" path="res://levelmenu1.gd" id="1_2e5e1"]
+
+[sub_resource type="Gradient" id="Gradient_mj7od"]
+colors = PackedColorArray(0.701902, 0.700395, 0, 1, 0.725084, 0.482501, 0.164116, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_8uqw5"]
+gradient = SubResource("Gradient_mj7od")
+
+[node name="menu1" type="Node2D"]
+position = Vector2(6, 0)
+script = ExtResource("1_2e5e1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(959.75, 541.5)
+scale = Vector2(29.8828, 16.7969)
+texture = SubResource("GradientTexture2D_8uqw5")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 460.0
+offset_top = 200.0
+offset_right = 781.0
+offset_bottom = 364.0
+theme_override_font_sizes/font_size = 30
+text = "1
+ Pilot"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button11" type="Button" parent="."]
+offset_left = 1110.0
+offset_top = 600.0
+offset_right = 1431.0
+offset_bottom = 764.0
+theme_override_font_sizes/font_size = 30
+text = "6
+Crazy Handful
+ of Nothin'"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button10" type="Button" parent="."]
+offset_left = 1110.0
+offset_top = 400.0
+offset_right = 1431.0
+offset_bottom = 564.0
+theme_override_font_sizes/font_size = 30
+text = "4
+Cancer Man"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button9" type="Button" parent="."]
+offset_left = 1110.0
+offset_top = 200.0
+offset_right = 1431.0
+offset_bottom = 364.0
+theme_override_font_sizes/font_size = 30
+text = "2
+ Cat's in the bag...
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button4" type="Button" parent="."]
+offset_left = 785.0
+offset_top = 800.0
+offset_right = 1106.0
+offset_bottom = 964.0
+theme_override_font_sizes/font_size = 30
+text = "7
+A No-Rough-Stuff-
+Type Deal
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 460.0
+offset_top = 600.0
+offset_right = 781.0
+offset_bottom = 764.0
+theme_override_font_sizes/font_size = 30
+text = "5
+Gray Matter
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button7" type="Button" parent="."]
+offset_left = 460.0
+offset_top = 400.0
+offset_right = 781.0
+offset_bottom = 564.0
+theme_override_font_sizes/font_size = 30
+text = "3
+... And the Bag's 
+in the River
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 66.0
+offset_top = 929.0
+offset_right = 142.0
+offset_bottom = 979.0
+theme_override_font_sizes/font_size = 30
+text = "back
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 711.0
+offset_top = 22.0
+offset_right = 1182.0
+offset_bottom = 176.0
+theme_override_font_sizes/font_size = 100
+text = "Season 1"
+editable = false
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

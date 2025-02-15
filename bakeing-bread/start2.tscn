@@ -1,0 +1,642 @@
+[gd_scene load_steps=5 format=3 uid="uid://bwop2084ksx7w"]
+
+[ext_resource type="Script" path="res://start_2.gd" id="1_tdmg0"]
+
+[sub_resource type="Animation" id="Animation_6r0t6"]
+length = 4.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.26667, 4)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:color:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.26667, 4)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:color:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.26667, 4)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ColorRect:color:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 2, 4)
+}
+
+[sub_resource type="Animation" id="Animation_w4i73"]
+resource_name = "fade"
+length = 4.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(-0.266667, 2, 4, 5.13333)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:color:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 2, 3.6, 4)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:color:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 2, 4, 5)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ColorRect:color:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 2, 4, 5)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j4k6u"]
+_data = {
+"RESET": SubResource("Animation_6r0t6"),
+"fade": SubResource("Animation_w4i73")
+}
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_tdmg0")
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = -79.0
+offset_top = -11.0
+offset_right = 1921.0
+offset_bottom = 1122.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 104.0
+offset_top = -5.0
+offset_right = 2094.0
+offset_bottom = 282.0
+theme_override_font_sizes/normal_font_size = 180
+text = "Breaking Bad"
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_j4k6u")
+}
+autoplay = "fade"
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+offset_left = 967.0
+offset_top = 636.0
+offset_right = 1172.0
+offset_bottom = 649.0
+rotation = -0.404916
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = 1498.0
+offset_top = 333.0
+offset_right = 2684.0
+offset_bottom = 1097.0
+theme_override_font_sizes/normal_font_size = 100
+text = "Spoilers
+ahead ! 
+
+( Duh ! )"
+
+[node name="ColorRect12" type="ColorRect" parent="."]
+offset_left = 948.0
+offset_top = 460.0
+offset_right = 1028.0
+offset_bottom = 473.0
+rotation = -0.404916
+
+[node name="ColorRect13" type="ColorRect" parent="."]
+offset_left = 856.0
+offset_top = 233.0
+offset_right = 936.0
+offset_bottom = 246.0
+rotation = -0.404916
+
+[node name="ColorRect24" type="ColorRect" parent="."]
+offset_left = 927.0
+offset_top = 201.0
+offset_right = 970.0
+offset_bottom = 216.0
+
+[node name="ColorRect23" type="ColorRect" parent="."]
+offset_left = 566.0
+offset_top = 232.0
+offset_right = 646.0
+offset_bottom = 245.0
+rotation = -0.404916
+
+[node name="ColorRect7" type="ColorRect" parent="."]
+offset_left = 419.0
+offset_top = 557.0
+offset_right = 624.0
+offset_bottom = 570.0
+rotation = 0.404916
+
+[node name="ColorRect14" type="ColorRect" parent="."]
+offset_left = 1021.0
+offset_top = 408.0
+offset_right = 1226.0
+offset_bottom = 421.0
+rotation = 0.270526
+
+[node name="ColorRect15" type="ColorRect" parent="."]
+offset_left = 378.0
+offset_top = 467.0
+offset_right = 583.0
+offset_bottom = 480.0
+rotation = -0.270526
+
+[node name="ColorRect18" type="ColorRect" parent="."]
+offset_left = 579.0
+offset_top = 231.0
+offset_right = 784.0
+offset_bottom = 244.0
+rotation = 1.5708
+
+[node name="ColorRect19" type="ColorRect" parent="."]
+offset_left = 1031.0
+offset_top = 227.0
+offset_right = 1236.0
+offset_bottom = 240.0
+rotation = 1.5708
+
+[node name="ColorRect28" type="ColorRect" parent="."]
+offset_left = 919.0
+offset_top = 824.0
+offset_right = 1031.0
+offset_bottom = 837.0
+rotation = 1.5708
+
+[node name="ColorRect29" type="ColorRect" parent="."]
+offset_left = 653.0
+offset_top = 827.0
+offset_right = 765.0
+offset_bottom = 840.0
+rotation = 1.5708
+
+[node name="ColorRect30" type="ColorRect" parent="."]
+offset_left = 667.0
+offset_top = 809.0
+offset_right = 713.0
+offset_bottom = 822.0
+rotation = 1.5708
+
+[node name="ColorRect31" type="ColorRect" parent="."]
+offset_left = 683.0
+offset_top = 795.0
+offset_right = 729.0
+offset_bottom = 808.0
+rotation = 1.5708
+
+[node name="ColorRect32" type="ColorRect" parent="."]
+offset_left = 697.0
+offset_top = 800.0
+offset_right = 743.0
+offset_bottom = 813.0
+rotation = 1.5708
+
+[node name="ColorRect33" type="ColorRect" parent="."]
+offset_left = 707.0
+offset_top = 791.0
+offset_right = 753.0
+offset_bottom = 804.0
+rotation = 1.5708
+
+[node name="ColorRect34" type="ColorRect" parent="."]
+offset_left = 722.0
+offset_top = 792.0
+offset_right = 768.0
+offset_bottom = 805.0
+rotation = 1.5708
+
+[node name="ColorRect35" type="ColorRect" parent="."]
+offset_left = 736.0
+offset_top = 786.0
+offset_right = 782.0
+offset_bottom = 799.0
+rotation = 1.5708
+
+[node name="ColorRect36" type="ColorRect" parent="."]
+offset_left = 746.0
+offset_top = 789.0
+offset_right = 792.0
+offset_bottom = 802.0
+rotation = 1.5708
+
+[node name="ColorRect37" type="ColorRect" parent="."]
+offset_left = 758.0
+offset_top = 781.0
+offset_right = 804.0
+offset_bottom = 794.0
+rotation = 1.5708
+
+[node name="ColorRect38" type="ColorRect" parent="."]
+offset_left = 769.0
+offset_top = 776.0
+offset_right = 815.0
+offset_bottom = 789.0
+rotation = 1.5708
+
+[node name="ColorRect39" type="ColorRect" parent="."]
+offset_left = 776.0
+offset_top = 791.0
+offset_right = 822.0
+offset_bottom = 804.0
+rotation = 1.5708
+
+[node name="ColorRect40" type="ColorRect" parent="."]
+offset_left = 785.0
+offset_top = 783.0
+offset_right = 831.0
+offset_bottom = 796.0
+rotation = 1.5708
+
+[node name="ColorRect41" type="ColorRect" parent="."]
+offset_left = 805.0
+offset_top = 782.0
+offset_right = 851.0
+offset_bottom = 795.0
+rotation = 1.5708
+
+[node name="ColorRect42" type="ColorRect" parent="."]
+offset_left = 797.0
+offset_top = 785.0
+offset_right = 843.0
+offset_bottom = 798.0
+rotation = 1.5708
+
+[node name="ColorRect43" type="ColorRect" parent="."]
+offset_left = 818.0
+offset_top = 784.0
+offset_right = 864.0
+offset_bottom = 797.0
+rotation = 1.5708
+
+[node name="ColorRect44" type="ColorRect" parent="."]
+offset_left = 830.0
+offset_top = 788.0
+offset_right = 876.0
+offset_bottom = 801.0
+rotation = 1.5708
+
+[node name="ColorRect65" type="ColorRect" parent="."]
+offset_left = 841.0
+offset_top = 794.0
+offset_right = 887.0
+offset_bottom = 807.0
+rotation = 1.5708
+
+[node name="ColorRect66" type="ColorRect" parent="."]
+offset_left = 849.0
+offset_top = 787.0
+offset_right = 895.0
+offset_bottom = 800.0
+rotation = 1.5708
+
+[node name="ColorRect67" type="ColorRect" parent="."]
+offset_left = 860.0
+offset_top = 797.0
+offset_right = 906.0
+offset_bottom = 810.0
+rotation = 1.5708
+
+[node name="ColorRect68" type="ColorRect" parent="."]
+offset_left = 874.0
+offset_top = 796.0
+offset_right = 920.0
+offset_bottom = 809.0
+rotation = 1.5708
+
+[node name="ColorRect69" type="ColorRect" parent="."]
+offset_left = 884.0
+offset_top = 797.0
+offset_right = 930.0
+offset_bottom = 810.0
+rotation = 1.5708
+
+[node name="ColorRect70" type="ColorRect" parent="."]
+offset_left = 894.0
+offset_top = 801.0
+offset_right = 940.0
+offset_bottom = 814.0
+rotation = 1.5708
+
+[node name="ColorRect73" type="ColorRect" parent="."]
+offset_left = 887.0
+offset_top = 891.0
+offset_right = 893.0
+offset_bottom = 1102.0
+rotation = 1.5708
+
+[node name="ColorRect71" type="ColorRect" parent="."]
+offset_left = 905.0
+offset_top = 805.0
+offset_right = 951.0
+offset_bottom = 818.0
+rotation = 1.5708
+
+[node name="ColorRect72" type="ColorRect" parent="."]
+offset_left = 913.0
+offset_top = 810.0
+offset_right = 959.0
+offset_bottom = 823.0
+rotation = 1.5708
+
+[node name="ColorRect45" type="ColorRect" parent="."]
+offset_left = 668.0
+offset_top = 928.0
+offset_right = 697.0
+offset_bottom = 941.0
+rotation = 1.5708
+
+[node name="ColorRect46" type="ColorRect" parent="."]
+offset_left = 682.0
+offset_top = 925.0
+offset_right = 711.0
+offset_bottom = 938.0
+rotation = 1.5708
+
+[node name="ColorRect47" type="ColorRect" parent="."]
+offset_left = 694.0
+offset_top = 935.0
+offset_right = 723.0
+offset_bottom = 948.0
+rotation = 1.5708
+
+[node name="ColorRect48" type="ColorRect" parent="."]
+offset_left = 707.0
+offset_top = 929.0
+offset_right = 736.0
+offset_bottom = 942.0
+rotation = 1.5708
+
+[node name="ColorRect50" type="ColorRect" parent="."]
+offset_left = 737.0
+offset_top = 924.0
+offset_right = 766.0
+offset_bottom = 937.0
+rotation = 1.5708
+
+[node name="ColorRect51" type="ColorRect" parent="."]
+offset_left = 751.0
+offset_top = 927.0
+offset_right = 780.0
+offset_bottom = 940.0
+rotation = 1.5708
+
+[node name="ColorRect52" type="ColorRect" parent="."]
+offset_left = 767.0
+offset_top = 931.0
+offset_right = 796.0
+offset_bottom = 944.0
+rotation = 1.5708
+
+[node name="ColorRect53" type="ColorRect" parent="."]
+offset_left = 786.0
+offset_top = 928.0
+offset_right = 815.0
+offset_bottom = 941.0
+rotation = 1.5708
+
+[node name="ColorRect54" type="ColorRect" parent="."]
+offset_left = 799.0
+offset_top = 929.0
+offset_right = 828.0
+offset_bottom = 942.0
+rotation = 1.5708
+
+[node name="ColorRect55" type="ColorRect" parent="."]
+offset_left = 813.0
+offset_top = 928.0
+offset_right = 842.0
+offset_bottom = 941.0
+rotation = 1.5708
+
+[node name="ColorRect56" type="ColorRect" parent="."]
+offset_left = 827.0
+offset_top = 925.0
+offset_right = 856.0
+offset_bottom = 938.0
+rotation = 1.5708
+
+[node name="ColorRect57" type="ColorRect" parent="."]
+offset_left = 909.0
+offset_top = 927.0
+offset_right = 938.0
+offset_bottom = 940.0
+rotation = 1.5708
+
+[node name="ColorRect58" type="ColorRect" parent="."]
+offset_left = 896.0
+offset_top = 932.0
+offset_right = 925.0
+offset_bottom = 945.0
+rotation = 1.5708
+
+[node name="ColorRect59" type="ColorRect" parent="."]
+offset_left = 884.0
+offset_top = 926.0
+offset_right = 913.0
+offset_bottom = 939.0
+rotation = 1.5708
+
+[node name="ColorRect60" type="ColorRect" parent="."]
+offset_left = 873.0
+offset_top = 930.0
+offset_right = 902.0
+offset_bottom = 943.0
+rotation = 1.5708
+
+[node name="ColorRect61" type="ColorRect" parent="."]
+offset_left = 858.0
+offset_top = 926.0
+offset_right = 887.0
+offset_bottom = 939.0
+rotation = 1.5708
+
+[node name="ColorRect62" type="ColorRect" parent="."]
+offset_left = 847.0
+offset_top = 930.0
+offset_right = 876.0
+offset_bottom = 943.0
+rotation = 1.5708
+
+[node name="ColorRect63" type="ColorRect" parent="."]
+offset_left = 837.0
+offset_top = 927.0
+offset_right = 866.0
+offset_bottom = 940.0
+rotation = 1.5708
+
+[node name="ColorRect64" type="ColorRect" parent="."]
+offset_left = 909.0
+offset_top = 935.0
+offset_right = 924.0
+offset_bottom = 1191.0
+rotation = 1.5708
+
+[node name="ColorRect49" type="ColorRect" parent="."]
+offset_left = 722.0
+offset_top = 932.0
+offset_right = 751.0
+offset_bottom = 945.0
+rotation = 1.5708
+
+[node name="ColorRect16" type="ColorRect" parent="."]
+offset_left = 424.0
+offset_top = 572.0
+offset_right = 531.0
+offset_bottom = 585.0
+rotation = -2.02633
+
+[node name="ColorRect17" type="ColorRect" parent="."]
+offset_left = 1212.0
+offset_top = 471.0
+offset_right = 1319.0
+offset_bottom = 484.0
+rotation = 2.02633
+
+[node name="ColorRect11" type="ColorRect" parent="."]
+offset_left = 573.0
+offset_top = 430.0
+offset_right = 657.0
+offset_bottom = 443.0
+rotation = 0.404916
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+offset_left = 922.0
+offset_top = 646.0
+offset_right = 1048.0
+offset_bottom = 659.0
+rotation = -0.270526
+
+[node name="ColorRect9" type="ColorRect" parent="."]
+offset_left = 918.0
+offset_top = 466.0
+offset_right = 986.0
+offset_bottom = 479.0
+rotation = -0.270526
+
+[node name="ColorRect6" type="ColorRect" parent="."]
+offset_left = 517.0
+offset_top = 610.0
+offset_right = 643.0
+offset_bottom = 623.0
+rotation = 0.270526
+
+[node name="ColorRect10" type="ColorRect" parent="."]
+offset_left = 635.0
+offset_top = 458.0
+offset_right = 676.0
+offset_bottom = 473.0
+rotation = 0.270526
+
+[node name="ColorRect20" type="ColorRect" parent="."]
+offset_left = 671.0
+offset_top = 213.0
+offset_right = 737.0
+offset_bottom = 228.0
+rotation = 0.270526
+
+[node name="ColorRect21" type="ColorRect" parent="."]
+offset_left = 964.0
+offset_top = 200.0
+offset_right = 1030.0
+offset_bottom = 215.0
+rotation = 0.270526
+
+[node name="ColorRect22" type="ColorRect" parent="."]
+offset_left = 639.0
+offset_top = 201.0
+offset_right = 705.0
+offset_bottom = 216.0
+rotation = 0.270526
+
+[node name="ColorRect5" type="ColorRect" parent="."]
+offset_left = 611.0
+offset_top = 640.0
+offset_right = 975.0
+offset_bottom = 653.0
+
+[node name="ColorRect8" type="ColorRect" parent="."]
+offset_left = 652.0
+offset_top = 464.0
+offset_right = 937.0
+offset_bottom = 477.0
+
+[node name="ColorRect25" type="ColorRect" parent="."]
+offset_left = 746.0
+offset_top = 243.0
+offset_right = 847.0
+offset_bottom = 256.0
+
+[node name="ColorRect26" type="ColorRect" parent="."]
+offset_left = 723.0
+offset_top = 232.0
+offset_right = 769.0
+offset_bottom = 245.0
+rotation = 0.136136
+
+[node name="ColorRect27" type="ColorRect" parent="."]
+offset_left = 832.0
+offset_top = 240.0
+offset_right = 878.0
+offset_bottom = 253.0
+rotation = -0.136136
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -101.0
+offset_top = -149.0
+offset_right = 2166.0
+offset_bottom = 1347.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true

@@ -1,0 +1,206 @@
+[gd_scene load_steps=17 format=3 uid="uid://cxvtc8rkc4bgm"]
+
+[ext_resource type="Script" path="res://start_3.gd" id="1_vgtkb"]
+
+[sub_resource type="Gradient" id="Gradient_q7vs6"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0.0658683, 0.431138, 0.93956)
+colors = PackedColorArray(0.506213, 0.263294, 0.0732745, 1, 0.708741, 0.475041, 0.240302, 1, 0.299948, 0.804074, 0.872548, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_megxn"]
+gradient = SubResource("Gradient_q7vs6")
+fill_from = Vector2(0.885321, 1)
+fill_to = Vector2(0.848624, 0.0917431)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_iieia"]
+
+[sub_resource type="Gradient" id="Gradient_nkddw"]
+offsets = PackedFloat32Array(0, 0.753247, 0.97006)
+colors = PackedColorArray(0.694118, 0.407843, 0.160784, 0.470588, 0.675882, 0.497838, 0.116535, 1, 0.298039, 0.803922, 0.870588, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qcd0n"]
+gradient = SubResource("Gradient_nkddw")
+fill_from = Vector2(0.825688, 0.582569)
+fill_to = Vector2(0.775229, 0.155963)
+
+[sub_resource type="Gradient" id="Gradient_bjm7f"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.371257, 1)
+colors = PackedColorArray(0.705882, 0.47451, 0.243137, 1, 0.694118, 0.494118, 0.270588, 1, 0.368627, 0.752941, 0.772549, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_hh2ra"]
+gradient = SubResource("Gradient_bjm7f")
+fill_from = Vector2(0.440367, 0.995413)
+fill_to = Vector2(0.353211, 0)
+
+[sub_resource type="Gradient" id="Gradient_olgxk"]
+colors = PackedColorArray(0.257167, 0.564751, 0.407955, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_2nplq"]
+gradient = SubResource("Gradient_olgxk")
+fill_from = Vector2(0.431193, 0.788991)
+fill_to = Vector2(0.440367, 1)
+
+[sub_resource type="Gradient" id="Gradient_olfvr"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.191617, 0.706587, 1)
+colors = PackedColorArray(1, 0.403922, 0.027451, 1, 0.90169, 0.357601, 0, 1, 0.832746, 0.49814, 0.265805, 1, 0.582321, 0.275803, 0.0291065, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_deauk"]
+gradient = SubResource("Gradient_olfvr")
+fill_from = Vector2(0.489177, 0)
+fill_to = Vector2(0.632035, 1)
+
+[sub_resource type="Animation" id="Animation_qstg1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_k6k8i"]
+resource_name = "fadeHome"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ch80x"]
+resource_name = "new_animation"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t17ry"]
+_data = {
+"RESET": SubResource("Animation_qstg1"),
+"fadeHome": SubResource("Animation_k6k8i"),
+"new_animation": SubResource("Animation_ch80x")
+}
+
+[node name="Main menu" type="Node2D"]
+position = Vector2(1052, 590)
+script = ExtResource("1_vgtkb")
+
+[node name="hintergrund 1" type="Sprite2D" parent="."]
+position = Vector2(-91.5008, -51.5008)
+scale = Vector2(30.6406, 16.8594)
+texture = SubResource("GradientTexture2D_megxn")
+
+[node name="hintergrund2" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_iieia")
+position = Vector2(-858.811, -224)
+scale = Vector2(-7.42099, 12.2269)
+texture = SubResource("GradientTexture2D_qcd0n")
+
+[node name="hintergrund3" type="Sprite2D" parent="."]
+position = Vector2(762, -258)
+scale = Vector2(4.3125, 11.1563)
+texture = SubResource("GradientTexture2D_hh2ra")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(248, 234)
+rotation = -0.261799
+scale = Vector2(6.04705, 10.5999)
+skew = 0.298451
+texture = SubResource("GradientTexture2D_2nplq")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(229, -201)
+rotation = -0.380482
+scale = Vector2(1.9391, 3.88246)
+skew = 0.253073
+texture = SubResource("GradientTexture2D_deauk")
+
+[node name="s1" type="Button" parent="."]
+offset_left = -759.0
+offset_top = -382.0
+offset_right = -259.0
+offset_bottom = -249.215
+theme_override_font_sizes/font_size = 43
+text = "Season 1"
+metadata/_edit_use_anchors_ = true
+
+[node name="s3" type="Button" parent="."]
+offset_left = -754.0
+offset_top = -69.0
+offset_right = -254.0
+offset_bottom = 63.785
+theme_override_font_sizes/font_size = 43
+text = "Season 3"
+metadata/_edit_use_anchors_ = true
+
+[node name="s4" type="Button" parent="."]
+offset_left = -44.0
+offset_top = -63.0
+offset_right = 456.0
+offset_bottom = 69.785
+theme_override_font_sizes/font_size = 43
+text = "Season 4"
+metadata/_edit_use_anchors_ = true
+
+[node name="s5" type="Button" parent="."]
+offset_left = -382.0
+offset_top = 208.0
+offset_right = 118.0
+offset_bottom = 340.785
+theme_override_font_sizes/font_size = 43
+text = "Season 5"
+metadata/_edit_use_anchors_ = true
+
+[node name="s2" type="Button" parent="."]
+offset_left = -32.0
+offset_top = -379.0
+offset_right = 468.0
+offset_bottom = -246.215
+theme_override_font_sizes/font_size = 43
+text = "Season 2"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button2" type="Button" parent="."]
+offset_left = -1018.0
+offset_top = 338.0
+offset_right = -658.0
+offset_bottom = 470.0
+theme_override_font_sizes/font_size = 35
+text = "Exit"
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -1277.0
+offset_top = -759.0
+offset_right = 990.0
+offset_bottom = 737.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_t17ry")
+}
+
+[connection signal="pressed" from="s1" to="." method="_on_s_1_pressed"]
+[connection signal="pressed" from="s1" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="s3" to="." method="_on_s_3_pressed"]
+[connection signal="pressed" from="s3" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="s4" to="." method="_on_s_4_pressed"]
+[connection signal="pressed" from="s4" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="s5" to="." method="_on_s_5_pressed"]
+[connection signal="pressed" from="s5" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="s2" to="." method="_on_s_2_pressed"]
+[connection signal="pressed" from="s2" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
