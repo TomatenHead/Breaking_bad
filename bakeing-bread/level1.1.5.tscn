@@ -218,5 +218,6 @@ libraries = {
 }
 script = ExtResource("6_b16tj")
 
+[connection signal="pressed" from="Button" to="AnimationPlayer" method="_on_button_pressed"]
 [connection signal="pressed" from="Button3" to="AnimationPlayer" method="_on_button_3_pressed"]
 [connection signal="button_up" from="Button4" to="AnimationPlayer" method="_on_button_4_button_up"]
