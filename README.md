@@ -6,14 +6,14 @@ This Godot project recreates  *Breaking Bad* in the *Henry Stickmin* style.  All
 
 ## Requirements
 
-- Godot Engine (Version 4.x recommended)
+- Godot Engine (Version 4.x required)
 - A computer with basic graphics processing capabilities
 
 ## Installation & Usage
 
 1. Download or clone the repository.
 2. Open the project with the Godot Engine.
-3. Run the `main.tscn` scene to play the animation.
+3. Click Start
 
 ## Features
 
