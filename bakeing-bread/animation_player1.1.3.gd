@@ -11,8 +11,7 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_button_4_button_up() -> void:
-	get_tree().change_scene_to_file("res://Levelmenu1.tscn")
+
 
 
 func _on_button_3_pressed() -> void:
@@ -21,3 +20,11 @@ func _on_button_3_pressed() -> void:
 
 func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://levelfail1.1.1.2.tscn")
+
+
+func _on_button_4_pressed() -> void:
+	get_tree().change_scene_to_file("res://Levelmenu1.tscn")
+
+
+func _on_button_2_pressed() -> void:
+	get_tree().change_scene_to_file("res://level1.1.6.tscn")
