@@ -11,9 +11,15 @@ This Godot project recreates  *Breaking Bad* in the *Henry Stickmin* style.  All
 
 ## Installation & Usage
 
+**using godot**
 1. Download or clone the repository.
 2. Open the project with the Godot Engine.
 3. Click Start
+**using .exe**
+1. Download or clone the repository.
+2. Unfold folder
+3. Click on Breaking bad.exe
+
 
 ## Features
 
