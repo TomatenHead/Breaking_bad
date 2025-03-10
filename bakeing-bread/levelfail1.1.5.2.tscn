@@ -1,0 +1,290 @@
+[gd_scene load_steps=10 format=3 uid="uid://c6k5nghmj3o60"]
+
+[ext_resource type="Texture2D" uid="uid://dudln7dock3l7" path="res://RV 1.1.3.png" id="1_pef6h"]
+[ext_resource type="Script" path="res://fail1.1.gd" id="3_33wgn"]
+[ext_resource type="Shader" path="res://levelfail1.1.1.gdshader" id="4_kwady"]
+
+[sub_resource type="Animation" id="Animation_cuds3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-2953, -203)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1517, 1170)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(308, 482)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Label:theme_override_font_sizes/font_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [500]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Label2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(716, 874)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Sprite2D3:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(973, 965)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Button2:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(34, 996)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Button:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1813, 1349)]
+}
+
+[sub_resource type="Animation" id="Animation_r36dg"]
+resource_name = "police"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(2.5, 2.53333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-2953, -203), Vector2(-163, -66)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(3.03333),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1517, 1170)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2.73333, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-4894, -4306), Vector2(308, 482)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Label:theme_override_font_sizes/font_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(2.63333, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [5000, 500]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Label2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(3.86667, 4, 4.03333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(726, 1282), Vector2(696, 874), Vector2(696, 874)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Sprite2D3:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(3.86667, 3.96667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(968, 1383), Vector2(973, 965)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Button2:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(4.96667, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(4, 1240), Vector2(34, 996)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Button:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(4.96667, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1813, 1349), Vector2(1800, 989)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vhwk5"]
+_data = {
+"RESET": SubResource("Animation_cuds3"),
+"police": SubResource("Animation_r36dg")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wbyyh"]
+shader = ExtResource("4_kwady")
+
+[sub_resource type="Gradient" id="Gradient_r6r8n"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_fmris"]
+gradient = SubResource("Gradient_r6r8n")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(959, 538)
+scale = Vector2(1.32299, 1.17035)
+texture = ExtResource("1_pef6h")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_vhwk5")
+}
+script = ExtResource("3_33wgn")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_wbyyh")
+offset_left = -163.0
+offset_top = -66.0
+offset_right = 1984.0
+offset_bottom = 1288.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="."]
+offset_left = 1800.0
+offset_top = 989.0
+offset_right = 1907.0
+offset_bottom = 1060.0
+theme_override_font_sizes/font_size = 30
+text = "retry"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 34.0
+offset_top = 996.0
+offset_right = 96.0
+offset_bottom = 1046.0
+theme_override_font_sizes/font_size = 30
+text = "exit
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(973, 965)
+scale = Vector2(9.1875, 2.96875)
+texture = SubResource("GradientTexture2D_fmris")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 696.0
+offset_top = 874.0
+offset_right = 1258.0
+offset_bottom = 1045.0
+theme_override_font_sizes/font_size = 40
+text = "You are a chemistry teacher! 
+How did you manage to 
+not follow safety instruction?"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = 308.0
+offset_top = 482.0
+offset_right = 1825.0
+offset_bottom = 1652.0
+rotation = -0.430299
+theme_override_colors/font_color = Color(1, 0.301961, 0.0823529, 1)
+theme_override_font_sizes/font_size = 500
+text = "FAIL!"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Button" to="AnimationPlayer" method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="AnimationPlayer" method="_on_button_2_pressed"]

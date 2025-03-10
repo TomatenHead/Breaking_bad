@@ -200,8 +200,8 @@ expand_icon = true
 [node name="Button3" type="Button" parent="."]
 offset_left = -256.286
 offset_top = -136.196
-offset_right = -86.2862
-offset_bottom = -35.1958
+offset_right = -86.286
+offset_bottom = -35.196
 icon = ExtResource("5_j2kv5")
 expand_icon = true
 
@@ -218,5 +218,7 @@ libraries = {
 }
 script = ExtResource("6_b16tj")
 
+[connection signal="pressed" from="Button" to="AnimationPlayer" method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="AnimationPlayer" method="_on_button_2_pressed"]
 [connection signal="pressed" from="Button3" to="AnimationPlayer" method="_on_button_3_pressed"]
 [connection signal="button_up" from="Button4" to="AnimationPlayer" method="_on_button_4_button_up"]

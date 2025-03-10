@@ -1,0 +1,108 @@
+[gd_scene load_steps=7 format=3 uid="uid://88wfvj4mke4v"]
+
+[ext_resource type="Texture2D" uid="uid://dyys3c2k1fok" path="res://Bildschirmfoto_11-2-2025_20134_sketchfab.com.jpeg" id="1_g512g"]
+[ext_resource type="Texture2D" uid="uid://b2j101pc4607g" path="res://ww.png" id="2_0q5vw"]
+[ext_resource type="Script" path="res://1.1.6.gd" id="3_212em"]
+
+[sub_resource type="Animation" id="Animation_klpjh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D2:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-5.87818, 5.11739)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(120, 585)]
+}
+
+[sub_resource type="Animation" id="Animation_na0hu"]
+resource_name = "gun"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D2:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(3, 1),
+"update": 0,
+"values": [Vector2(-13.8831, 11.4242), Vector2(-5.87818, 5.11739)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(3, 1),
+"update": 0,
+"values": [-0.558505, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(3, 1),
+"update": 0,
+"values": [Vector2(-2515, 879), Vector2(120, 585)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_l1r7l"]
+_data = {
+"RESET": SubResource("Animation_klpjh"),
+"gun": SubResource("Animation_na0hu")
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(995.75, 519.25)
+scale = Vector2(1.46957, 1.33793)
+texture = ExtResource("1_g512g")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(120, 585)
+scale = Vector2(-5.87818, 5.11739)
+texture = ExtResource("2_0q5vw")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_l1r7l")
+}
+script = ExtResource("3_212em")
