@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cdy2ys8vtkp46" path="res://RV 1.1.4.png" id="1_kevdv"]
 [ext_resource type="Texture2D" uid="uid://cu1cggaiyi4fi" path="res://Leg.png" id="2_wnqbd"]
-[ext_resource type="Script" path="res://animation_player1.1.4.gd" id="3_her47"]
+[ext_resource type="Script" path="res://1.1.4.gd" id="3_gufwl"]
 
 [sub_resource type="Gradient" id="Gradient_jctbd"]
 offsets = PackedFloat32Array(1)
@@ -116,4 +116,4 @@ texture = SubResource("GradientTexture2D_ot23l")
 libraries = {
 "": SubResource("AnimationLibrary_1gyf7")
 }
-script = ExtResource("3_her47")
+script = ExtResource("3_gufwl")

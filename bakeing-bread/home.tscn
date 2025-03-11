@@ -145,7 +145,7 @@ offset_top = 409.0
 offset_right = 869.0
 offset_bottom = 494.0
 theme_override_font_sizes/font_size = 50
-text = "v.0.3.2"
+text = "v.0.3.3"
 
 [connection signal="pressed" from="s1" to="." method="_on_s_1_pressed"]
 [connection signal="pressed" from="s1" to="." method="_on_button_pressed"]

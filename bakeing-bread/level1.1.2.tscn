@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dyys3c2k1fok" path="res://Bildschirmfoto_11-2-2025_20134_sketchfab.com.jpeg" id="1_olg4f"]
 [ext_resource type="Texture2D" uid="uid://c7087upw72yax" path="res://inverted_bold_minimal_outline_sketch.png" id="2_x1g0x"]
-[ext_resource type="Script" path="res://animation_player1.1.2.gd" id="3_n8eut"]
+[ext_resource type="Script" path="res://1.1.2.gd" id="3_dbhba"]
 
 [sub_resource type="Animation" id="Animation_2giu2"]
 length = 0.001
@@ -114,7 +114,7 @@ texture = ExtResource("2_x1g0x")
 libraries = {
 "": SubResource("AnimationLibrary_q7gui")
 }
-script = ExtResource("3_n8eut")
+script = ExtResource("3_dbhba")
 
 [node name="Sprite2D3" type="Sprite2D" parent="."]
 position = Vector2(1657.3, 743.332)

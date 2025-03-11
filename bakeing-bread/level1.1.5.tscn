@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cqvgiik285afd" path="res://inverted_bold_minimal_outline_sketch - Kopie.png" id="3_jm1f6"]
 [ext_resource type="Texture2D" uid="uid://bjty3jiuo0y42" path="res://gun.png" id="4_pq1hu"]
 [ext_resource type="Texture2D" uid="uid://c5cxwihct4xh5" path="res://gun_shooting.png" id="5_j2kv5"]
-[ext_resource type="Script" path="res://animation_player1.1.3.gd" id="6_b16tj"]
+[ext_resource type="Script" path="res://1.1.5.gd" id="6_b16tj"]
 
 [sub_resource type="Animation" id="Animation_n7tox"]
 resource_name = "1.1.3"
