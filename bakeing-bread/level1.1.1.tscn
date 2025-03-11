@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dkrfpu5t2cahh"]
 
-[ext_resource type="Script" path="res://animation_player1.1.1.gd" id="1_6bhl6"]
+[ext_resource type="Script" path="res://1.1.1.gd" id="1_q4777"]
 [ext_resource type="Texture2D" uid="uid://wnn0pbbtvmk2" path="res://dessert.png" id="2_6glnt"]
 [ext_resource type="Texture2D" uid="uid://c6klx6adlp3jy" path="res://RV.png" id="3_6fmiu"]
 
@@ -71,7 +71,7 @@ _data = {
 libraries = {
 "": SubResource("AnimationLibrary_42ab5")
 }
-script = ExtResource("1_6bhl6")
+script = ExtResource("1_q4777")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(991.75, 557)
