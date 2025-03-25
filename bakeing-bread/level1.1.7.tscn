@@ -1,15 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://d0mpkxuggjno7"]
+[gd_scene load_steps=4 format=3 uid="uid://d0mpkxuggjno7"]
 
 [ext_resource type="VideoStream" path="res://Breaking-Bad-Official-Show-Opening-Intro-_HD_.ogv" id="1_ctkih"]
 [ext_resource type="Script" path="res://1.1.7.gd" id="2_g2xxf"]
+[ext_resource type="VideoStream" path="res://intro.ogv" id="3_ogojr"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
-offset_right = 1921.0
-offset_bottom = 1079.0
+offset_left = -467.0
+offset_top = -121.0
+offset_right = -203.0
+offset_bottom = 8.0
 stream = ExtResource("1_ctkih")
 autoplay = true
 expand = true
 buffering_msec = 1000
 script = ExtResource("2_g2xxf")
+
+[node name="VideoStreamPlayer2" type="VideoStreamPlayer" parent="."]
+offset_right = 1923.0
+offset_bottom = 1068.0
+stream = ExtResource("3_ogojr")
+autoplay = true
