@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://vat3ff67l5v0"]
+
+[ext_resource type="VideoStream" path="res://intro.ogv" id="1_0xmjn"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_right = 1926.0
+offset_bottom = 1085.0
+stream = ExtResource("1_0xmjn")
+autoplay = true

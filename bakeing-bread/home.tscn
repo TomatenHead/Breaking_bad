@@ -145,14 +145,14 @@ offset_top = 409.0
 offset_right = 869.0
 offset_bottom = 494.0
 theme_override_font_sizes/font_size = 50
-text = "v.0.3.3"
+text = "v.0.5"
 
 [connection signal="pressed" from="s1" to="." method="_on_s_1_pressed"]
 [connection signal="pressed" from="s1" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="s3" to="." method="_on_s_3_pressed"]
 [connection signal="pressed" from="s3" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="s4" to="." method="_on_s_4_pressed"]
+[connection signal="pressed" from="s3" to="." method="_on_s_3_pressed"]
 [connection signal="pressed" from="s4" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="s4" to="." method="_on_s_4_pressed"]
 [connection signal="pressed" from="s5" to="." method="_on_s_5_pressed"]
 [connection signal="pressed" from="s5" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="s2" to="." method="_on_s_2_pressed"]
